@@ -20,7 +20,7 @@ The `stats.py` code is taken from https://learn.adafruit.com/pi-hole-ad-blocker-
 ```
 sudo systemctl enable PiOLED
 ```
-- if the file changes, run:
+- if the file `/etc/systemd/system/PiOLED.service` changes, run:
 ```
 sudo systemctl daemon-reload
 ```
