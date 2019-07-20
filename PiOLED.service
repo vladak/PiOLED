@@ -1,0 +1,14 @@
+[Unit]
+Description=PiOLED Service
+Requires=containerd.service
+After=containerd.service
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/PiOLED
+ExecStart=sudo python3 /srv/PiOLED/stats.py
+ExecStop=/bin/kill -2 $MAINPID
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
