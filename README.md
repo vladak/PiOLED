@@ -14,7 +14,10 @@ The `stats.py` code is taken from https://learn.adafruit.com/pi-hole-ad-blocker-
     sudo apt-get install -y python3-pip
 ```
 - enable I2C bus via `raspi-config`
-- follow https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pioled
+- clone the repository to `/srv/`:
+```
+    git clone https://github.com/vladak/PiOLED.git /srv/PiOLED
+```
 - copy `PiOLED.service` file to `/etc/systemd/system/PiOLED.service`:
 - enable the service:
 ```
